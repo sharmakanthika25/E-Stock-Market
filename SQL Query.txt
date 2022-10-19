@@ -1,0 +1,35 @@
+create database stockmarketdb;
+
+show databases;
+
+use stockmarketdb;
+
+show tables;
+   
+create table company(
+ID int IDENTITY(1,1) PRIMARY KEY,
+company_code VARCHAR(50)UNIQUE NOT NULL,
+company_name VARCHAR(200),
+company_ceo VARCHAR(200),	
+company_turnover money,
+company_website VARCHAR(200),
+stock_exchange	VARCHAR(50),
+);
+
+create table stock(
+stock_id int IDENTITY(1,1) PRIMARY KEY,
+company_code VARCHAR(50),
+stock_price money,
+stock_start_date DATE,
+stock_end_date DATE,
+stock_start_time TIME,
+stock_end_time TIME,
+CONSTRAINT fk_inv_stock  
+FOREIGN KEY (company_code)  
+REFERENCES company(company_code)
+
+);
+
+commit;
+
+show tables;
