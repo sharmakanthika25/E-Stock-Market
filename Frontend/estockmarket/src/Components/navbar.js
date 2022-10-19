@@ -5,7 +5,7 @@ function Navbar(props) {
     return(
         <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/"><img src="stock_market_image.jpg" height="30" width="40" alt="EStockMarketLogo"/></Link>
+            <Link className="navbar-brand" to="/"><img src="stock_market_image.png" height="80" width="80" alt="EStockMarketLogo"/></Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
